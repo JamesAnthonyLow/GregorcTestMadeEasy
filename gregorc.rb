@@ -25,6 +25,8 @@ CR = 0
 
 @gradeAry = [CS, AS, AR, CR]
 
+
+
 def gregoricGrader(rubric)
 	print "1) "
 	letter = (gets.chomp).upcase
@@ -36,6 +38,8 @@ def gregoricGrader(rubric)
 	idx = rubric.index(letter)
 	@gradeAry[idx] = (@gradeAry[idx] + 1)
 end
+
+puts "Pick two choices that best describe you"
 
 puts "1.  a) Imaginative "
 puts "    b) Investigative "
