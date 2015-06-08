@@ -29,12 +29,22 @@ CR = 0
 
 def gregoricGrader(rubric)
 	print "1) "
+	letter = ""
+	while true
 	letter = (gets.chomp).upcase
+	break if (letter == 'A' or letter == 'B' or letter == 'C' or letter == 'D')
+	puts "Please choose a A, B, C, or D" 
+	end
 	idx = rubric.index(letter)
 	@gradeAry[idx] = (@gradeAry[idx] + 1)
 
 	print "2) "
-	letter = (gets.chomp).upcase
+	letter2 = ""
+	while true
+	letter2 = (gets.chomp).upcase
+	break if (letter2 == 'A' or letter2 == 'B' or letter2 == 'C' or letter2 == 'D') unless (letter2 == letter)
+	puts "Please choose a A, B, C, or D and do not choose the same choice twice" 
+	end
 	idx = rubric.index(letter)
 	@gradeAry[idx] = (@gradeAry[idx] + 1)
 end
@@ -159,7 +169,10 @@ puts "     c) Thinking "
 puts "     d) Experimenting "
 
 gregoricGrader(rubric[rubricIndex])
-@gradeAry.each {|a| a*=4 }
-puts @gradeAry.join(' ')
+puts "Concrete Sequential: #{@gradeAry[0].to_s}"
+puts "Abstract Sequential: #{@gradeAry[1].to_s}"
+puts "Concrete Random: #{@gradeAry[2].to_s}"
+puts "Abstract Random: #{@gradeAry[3].to_s}"
+
 
 
