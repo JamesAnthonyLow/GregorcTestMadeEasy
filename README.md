@@ -1,3 +1,3 @@
 # GregorcTestMadeEasy
 
-Command line tool to facilitate taking this [https://github.com/JamesAnthonyLow/GregorcTestMadeEasy.git](Gregorc thinking style test)
+Command line tool to facilitate taking this [Gregorc thinking style test](http://www.thelearningweb.net/personalthink.html)
